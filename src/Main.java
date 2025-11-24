@@ -11,10 +11,10 @@ public class Main {
         cube.InitiateCube();
 
 
-        move.PerformMoves(new String[]{"B",, "B", "F","L" , "R`", "Ba","T"});
+        move.PerformMoves(new String[]{"B", "B", "F","L" , "R`", "Ba","T"});
 
         cube.DisplayCube();
-        RubikCubeSolver = new RubikCubeSolver();
+        RubikCubeSolver solver= new RubikCubeSolver();
         solver.Solver(cube);
         cube.DisplayCube();
         }
