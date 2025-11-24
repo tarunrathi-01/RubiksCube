@@ -3,15 +3,21 @@ public class WhiteCornerSolver {
     private final char[][][] cube;
     private final Moves move;
 
-    public WhiteCornerSolver(RubiksCube cubeObj) {
-        this.cube = cubeObj.getCube();
-        this.move = new Moves(cubeObj);
+    public WhiteCornerSolver(RubiksCube rubiksCube) {
+        this.cube = rubiksCube.getCube();
+        this.move = new Moves(rubiksCube);
+    }
+    public void WhiteCornerSolver(){
+        whiteGreenRedSolver();
+        whiteGreenOrangeSolver();
+        whiteRedBlueSolver();
+        whiteBlueOrangeSolver();
     }
 
     // ---------------------------------------------------------
     //  WHITE-GREEN-RED CORNER
     // ---------------------------------------------------------
-    public void whiteGreenRedSolver() {
+    private void whiteGreenRedSolver() {
 
         if (cube[0][0][0] == 'W' && cube[1][2][0] == 'G' && cube[2][2][2] == 'R') {
         }
@@ -58,7 +64,7 @@ public class WhiteCornerSolver {
     // ---------------------------------------------------------
     //  WHITE-GREEN-ORANGE CORNER
     // ---------------------------------------------------------
-    public void whiteGreenOrangeSolver() {
+    private void whiteGreenOrangeSolver() {
 
         if (cube[0][0][2] == 'W' && cube[1][2][2] == 'G' && cube[2][2][0] == 'O') {
         }
@@ -100,7 +106,7 @@ public class WhiteCornerSolver {
     // ---------------------------------------------------------
     //  WHITE-RED-BLUE CORNER
     // ---------------------------------------------------------
-    public void whiteRedBlueSolver() {
+    private void whiteRedBlueSolver() {
 
         if (cube[0][2][0] == 'W' && cube[2][2][0] == 'R' && cube[3][2][2] == 'B') {
         }
@@ -137,7 +143,7 @@ public class WhiteCornerSolver {
     // ---------------------------------------------------------
     //  WHITE-BLUE-ORANGE CORNER
     // ---------------------------------------------------------
-    public void whiteBlueOrangeSolver() {
+    private void whiteBlueOrangeSolver() {
 
         if (cube[0][2][2] == 'W' && cube[4][2][2] == 'O' && cube[3][2][0] == 'B') {
         }
