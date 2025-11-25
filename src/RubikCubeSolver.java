@@ -3,6 +3,6 @@ public class RubikCubeSolver {
         WhiteCrossSolver crossSolver = new WhiteCrossSolver(cube);
         crossSolver.SolveWhiteCross();
         WhiteCornerSolver cornerSolver = new WhiteCornerSolver(cube);
-        cornerSolver.WhiteCornerSolver();
+        cornerSolver.CornerSolver();
     }
 }
